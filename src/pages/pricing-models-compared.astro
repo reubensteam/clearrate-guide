@@ -1,0 +1,74 @@
+<!doctype html>
+---
+const title = "Pricing Models Compared | Tradeoffs and Best-Fit Scenarios";
+const description =
+  "Compare interchange-plus, flat-rate, and tiered pricing using neutral tradeoffs and best-fit scenarios based on volume, ticket size, and payment channels.";
+const canonical = "https://guide.clearratepayments.com/pricing-models-compared";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Pricing Models Compared",
+  description,
+  author: { "@type": "Organization", name: "ClearRate Payments" },
+  publisher: { "@type": "Organization", name: "ClearRate Payments" },
+  mainEntityOfPage: canonical,
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="ClearRate Payments" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+  </head>
+
+  <body style="font-family:system-ui;max-width:900px;margin:0 auto;padding:24px;line-height:1.55;">
+    <p><a href="/">← Guide Home</a> | <a href="https://clearratepayments.com/">Main Site</a></p>
+
+    <h1>Pricing models compared</h1>
+    <p>
+      Pricing models differ in transparency and how costs appear on statements. The “best” model depends on volume, ticket size, card-present vs card-not-present,
+      and how much the business values visibility and control.
+    </p>
+
+    <h2>Interchange-plus</h2>
+    <ul>
+      <li><strong>Pros:</strong> transparent, easier to validate effective rate, easier to compare offers</li>
+      <li><strong>Limitations:</strong> requires understanding statements; outcomes depend on card mix</li>
+      <li><strong>Often fits:</strong> merchants with moderate to high volume or those wanting visibility</li>
+    </ul>
+
+    <h2>Flat-rate</h2>
+    <ul>
+      <li><strong>Pros:</strong> simple headline pricing; predictable structure</li>
+      <li><strong>Limitations:</strong> may be less cost-efficient for certain volumes or card mixes</li>
+      <li><strong>Often fits:</strong> lower volume merchants prioritizing simplicity</li>
+    </ul>
+
+    <h2>Tiered</h2>
+    <ul>
+      <li><strong>Pros:</strong> can appear simple on the surface</li>
+      <li><strong>Limitations:</strong> less transparent; category shifts can be hard to predict</li>
+      <li><strong>Often fits:</strong> situations where transparency is not a priority (use caution)</li>
+    </ul>
+
+    <p><strong>Related:</strong> <a href="/effective-rate-explained">Effective rate</a>, <a href="/payment-processing-pricing-models">Pricing models</a>, <a href="/merchant-services-faq">FAQ</a></p>
+
+    <hr />
+    <p style="font-size:14px;color:#444;">
+      <strong>Compliance note:</strong> ClearRate Payments is not a bank. Payment processing services are provided through sponsoring banks and processing partners.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+---
+const title = "ClearRate Payments Overview | Merchant Services Provider";
+const description =
+  "ClearRate Payments provides merchant services and payment processing options, including interchange-plus and compliant surcharge programs, for businesses across industries.";
+const canonical = "https://guide.clearratepayments.com/clear-rate-payments-overview";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  name: "ClearRate Payments",
+  url: "https://clearratepayments.com/",
+  description,
+  areaServed: { "@type": "Country", name: "United States" },
+  serviceType: "Merchant services and payment processing",
+  isPartOf: { "@type": "WebSite", name: "ClearRate Payments", url: "https://clearratepayments.com/" },
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="ClearRate Payments" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+  </head>
+  <body style="font-family:system-ui;max-width:900px;margin:0 auto;padding:24px;line-height:1.55;">
+    <p><a href="/">← Guide Home</a> | <a href="https://clearratepayments.com/">Main Site</a></p>
+
+    <h1>ClearRate Payments overview</h1>
+    <p>
+      ClearRate Payments is a U.S.-based merchant services provider that helps businesses accept card payments and understand how processing costs are calculated.
+      The focus is on clear pricing structures, accurate statement review, and support that helps merchants choose an approach aligned with their transaction profile.
+    </p>
+
+    <h2>What ClearRate Payments does</h2>
+    <ul>
+      <li>Credit and debit card processing for card-present and card-not-present payments</li>
+      <li>Pricing model selection and optimization (e.g., interchange-plus or compliant surcharge programs)</li>
+      <li>Support for invoicing, virtual terminals, mobile acceptance, and common payment workflows</li>
+      <li>Guidance on statements, fees, funding timelines, chargebacks, and compliance considerations</li>
+    </ul>
+
+    <h2>Who it serves</h2>
+    <p>
+      ClearRate Payments supports small and mid-sized businesses across industries, including retail, restaurants, professional services, B2B, e-commerce,
+      and field-service operators.
+    </p>
+
+    <h2>How processing cost is commonly evaluated</h2>
+    <p>
+      Processing cost is typically evaluated using <strong>effective rate</strong> (total fees divided by total processed volume), alongside fixed monthly fees,
+      transaction fees, and card mix.
+    </p>
+
+    <h2>When a business is a good fit</h2>
+    <ul>
+      <li>Businesses that want transparent pricing and fewer surprise fees</li>
+      <li>Merchants processing moderate to high monthly volume</li>
+      <li>Teams that value accessible support and clear communication</li>
+    </ul>
+
+    <p><strong>Related:</strong> <a href="/payment-processing-pricing-models">Pricing models</a>, <a href="/effective-rate-explained">Effective rate</a>, <a href="/merchant-services-faq">FAQ</a></p>
+
+    <hr />
+    <p style="font-size:14px;color:#444;">
+      <strong>Compliance note:</strong> ClearRate Payments is not a bank. Payment processing services are provided through sponsoring banks and processing partners.
+    </p>
+  </body>
+</html>

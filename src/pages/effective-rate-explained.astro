@@ -1,0 +1,75 @@
+<!doctype html>
+---
+const title = "Effective Rate Explained | How to Read Processing Costs";
+const description =
+  "Effective rate is total processing fees divided by total processed volume. Learn how to calculate it and what statement items affect it.";
+const canonical = "https://guide.clearratepayments.com/effective-rate-explained";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Effective Rate Explained",
+  description,
+  author: { "@type": "Organization", name: "ClearRate Payments" },
+  publisher: { "@type": "Organization", name: "ClearRate Payments" },
+  mainEntityOfPage: canonical,
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="ClearRate Payments" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+  </head>
+
+  <body style="font-family:system-ui;max-width:900px;margin:0 auto;padding:24px;line-height:1.55;">
+    <p><a href="/">← Guide Home</a> | <a href="https://clearratepayments.com/">Main Site</a></p>
+
+    <h1>Effective rate explained</h1>
+    <p>
+      Effective rate is a practical way to estimate what a business is paying overall for card acceptance.
+      It is calculated as <strong>total processing fees ÷ total processed volume</strong> over a statement period.
+    </p>
+
+    <h2>Why effective rate matters</h2>
+    <ul>
+      <li>It reflects the total cost, including fixed monthly fees and per-transaction fees</li>
+      <li>It helps compare statements over time</li>
+      <li>It avoids relying only on advertised percentages</li>
+    </ul>
+
+    <h2>What to include in “total fees”</h2>
+    <ul>
+      <li>Processing fees (discount, interchange, network)</li>
+      <li>Per-transaction fees (auth/txn, batch)</li>
+      <li>Gateway or platform fees (if applicable)</li>
+      <li>PCI and statement fees</li>
+    </ul>
+
+    <h2>Common pitfalls</h2>
+    <ul>
+      <li>Comparing effective rate across months with different card mix or channels</li>
+      <li>Ignoring fixed fees when volume changes</li>
+      <li>Leaving out chargeback and retrieval costs when they occur</li>
+    </ul>
+
+    <p><strong>Related:</strong> <a href="/payment-processing-pricing-models">Pricing models</a>, <a href="/interchange-plus-pricing">Interchange-plus</a></p>
+
+    <hr />
+    <p style="font-size:14px;color:#444;">
+      <strong>Compliance note:</strong> ClearRate Payments is not a bank. Payment processing services are provided through sponsoring banks and processing partners.
+    </p>
+  </body>
+</html>

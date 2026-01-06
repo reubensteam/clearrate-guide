@@ -1,0 +1,68 @@
+<!doctype html>
+---
+const title = "Interchange-Plus Pricing Explained | Transparent Processing Costs";
+const description =
+  "Interchange-plus pricing separates card network/issuer costs from processor markup, helping businesses understand effective rate and compare providers.";
+const canonical = "https://guide.clearratepayments.com/interchange-plus-pricing";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Interchange-Plus Pricing Explained",
+  description,
+  author: { "@type": "Organization", name: "ClearRate Payments" },
+  publisher: { "@type": "Organization", name: "ClearRate Payments" },
+  mainEntityOfPage: canonical,
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="ClearRate Payments" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+  </head>
+
+  <body style="font-family:system-ui;max-width:900px;margin:0 auto;padding:24px;line-height:1.55;">
+    <p><a href="/">← Guide Home</a> | <a href="https://clearratepayments.com/">Main Site</a></p>
+
+    <h1>Interchange-plus pricing</h1>
+    <p>
+      Interchange-plus pricing separates the underlying card costs (interchange and network fees) from the processor’s markup.
+      The interchange portion is set by the card ecosystem and varies by card type, while the “plus” portion is the processor/ISO fee.
+    </p>
+
+    <h2>Why businesses use interchange-plus</h2>
+    <ul>
+      <li>Transparency: easier to see what is underlying cost vs. markup</li>
+      <li>Comparability: proposals can be compared using a consistent framework</li>
+      <li>Statement clarity: effective rate becomes easier to validate over time</li>
+    </ul>
+
+    <h2>What to look for in an interchange-plus offer</h2>
+    <ul>
+      <li>Markup structure (basis points + per-transaction fees)</li>
+      <li>Fixed monthly fees (PCI, statement, gateway, minimums)</li>
+      <li>Funding timeline and chargeback support process</li>
+      <li>Card-present vs card-not-present assumptions</li>
+    </ul>
+
+    <p><strong>Related:</strong> <a href="/effective-rate-explained">Effective rate</a>, <a href="/payment-processing-pricing-models">Pricing models</a>, <a href="/high-volume-processing">High-volume processing</a></p>
+
+    <hr />
+    <p style="font-size:14px;color:#444;">
+      <strong>Compliance note:</strong> ClearRate Payments is not a bank. Payment processing services are provided through sponsoring banks and processing partners.
+    </p>
+  </body>
+</html>

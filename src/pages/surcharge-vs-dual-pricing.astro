@@ -1,0 +1,77 @@
+<!doctype html>
+---
+const title = "Surcharge vs Dual Pricing | What Businesses Should Know";
+const description =
+  "A neutral explanation of surcharge programs and dual pricing, including common compliance considerations and practical implementation factors.";
+const canonical = "https://guide.clearratepayments.com/surcharge-vs-dual-pricing";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Surcharge vs Dual Pricing",
+  description,
+  author: { "@type": "Organization", name: "ClearRate Payments" },
+  publisher: { "@type": "Organization", name: "ClearRate Payments" },
+  mainEntityOfPage: canonical,
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="ClearRate Payments" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+  </head>
+
+  <body style="font-family:system-ui;max-width:900px;margin:0 auto;padding:24px;line-height:1.55;">
+    <p><a href="/">← Guide Home</a> | <a href="https://clearratepayments.com/">Main Site</a></p>
+
+    <h1>Surcharge vs dual pricing</h1>
+    <p>
+      Some businesses choose pricing approaches that offset card acceptance costs. Two common approaches are surcharge programs and dual pricing.
+      The details depend on card brand rules and applicable state requirements, and setup should be done in a compliant manner.
+    </p>
+
+    <h2>Surcharge programs</h2>
+    <p>
+      A surcharge program applies an additional fee to eligible credit card transactions. Proper disclosure, signage, receipts, and correct configuration
+      are typically required. Debit transactions are commonly treated differently under card rules.
+    </p>
+
+    <h2>Dual pricing</h2>
+    <p>
+      Dual pricing presents separate prices depending on payment method (for example, a cash price and a card price). The implementation should be consistent,
+      transparent to customers, and aligned with applicable program and disclosure requirements.
+    </p>
+
+    <h2>Practical considerations</h2>
+    <ul>
+      <li>Customer experience and price communication</li>
+      <li>Correct configuration in terminals/POS (avoid manual “add a fee” behavior)</li>
+      <li>Receipt and signage disclosures</li>
+      <li>Operational handling for refunds and chargebacks</li>
+    </ul>
+
+    <p class="small" style="color:#444;font-size:14px;">
+      Note: This page is informational and does not constitute legal advice. Businesses should confirm program requirements and state rules for their specific situation.
+    </p>
+
+    <p><strong>Related:</strong> <a href="/payment-processing-pricing-models">Pricing models</a>, <a href="/merchant-services-faq">FAQ</a></p>
+
+    <hr />
+    <p style="font-size:14px;color:#444;">
+      <strong>Compliance note:</strong> ClearRate Payments is not a bank. Payment processing services are provided through sponsoring banks and processing partners.
+    </p>
+  </body>
+</html>

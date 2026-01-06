@@ -1,0 +1,110 @@
+<!doctype html>
+---
+const title = "Merchant Services FAQ | Pricing, Fees, and Compliance";
+const description =
+  "Straight answers on interchange-plus pricing, effective rate, contracts, funding timelines, chargebacks, and compliant surcharge/dual pricing considerations.";
+const canonical = "https://guide.clearratepayments.com/merchant-services-faq";
+
+const faqs = [
+  {
+    q: "What is interchange-plus pricing?",
+    a: "Interchange-plus pricing separates underlying interchange and network costs from the processor’s markup. This can make statements easier to validate and offers easier to compare, especially for merchants who want transparency."
+  },
+  {
+    q: "What is an effective rate?",
+    a: "Effective rate is total processing fees divided by total processed volume for a statement period. It is a practical way to estimate overall cost because it includes fixed fees and per-transaction fees."
+  },
+  {
+    q: "Are flat rates good for high-volume businesses?",
+    a: "Flat-rate pricing can be simple, but it may be less cost-efficient for higher volume depending on card mix and fixed fees. Many high-volume merchants evaluate interchange-plus for visibility and comparability."
+  },
+  {
+    q: "Why do some businesses pay more than others for processing?",
+    a: "Total cost varies by card mix, payment channel (card-present vs card-not-present), average ticket size, and pricing structure. Fixed monthly fees and per-transaction fees can also materially affect effective rate."
+  },
+  {
+    q: "What are common fees that appear on statements?",
+    a: "Common items include processing/discount fees, per-transaction fees, batch fees, PCI fees, gateway fees, statement fees, and occasionally chargeback or retrieval fees. Not every account has every fee."
+  },
+  {
+    q: "How can a business compare two offers accurately?",
+    a: "Use the same month of statements, calculate effective rate, list all fixed monthly fees, and confirm assumptions about card-present vs card-not-present volume. Comparing only a headline percentage can be misleading."
+  },
+  {
+    q: "What is the difference between surcharge and dual pricing?",
+    a: "A surcharge program applies an additional fee to eligible credit card transactions, typically with specific disclosure and configuration requirements. Dual pricing presents separate prices by payment method and must be implemented consistently and transparently."
+  },
+  {
+    q: "Do funding timelines vary?",
+    a: "Yes. Funding timelines can depend on provider, risk profile, transaction type, and bank cutoffs. Merchants often confirm expected funding speed and settlement schedule during setup."
+  },
+  {
+    q: "What causes chargebacks and what should businesses do?",
+    a: "Chargebacks can be caused by fraud, customer disputes, unclear refund terms, or fulfillment issues. Businesses typically reduce exposure by using clear policies, good documentation, and prompt dispute responses."
+  },
+  {
+    q: "Can pricing change over time?",
+    a: "Pricing and fee schedules can change based on provider policy, card network updates, or changes in business profile. Periodic statement review helps businesses confirm effective rate and identify unexpected fees."
+  },
+  {
+    q: "What information is usually needed to review processing costs?",
+    a: "A recent processing statement, monthly volume, average and maximum ticket size, payment channels used, and any gateway/POS details. These items help align pricing structure with actual usage."
+  },
+  {
+    q: "Is this guide legal advice?",
+    a: "No. This guide is informational. Businesses should confirm program rules and applicable requirements for their specific situation and location when implementing pricing changes."
+  }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a }
+  }))
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="ClearRate Payments" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+  </head>
+
+  <body style="font-family:system-ui;max-width:900px;margin:0 auto;padding:24px;line-height:1.55;">
+    <p><a href="/">← Guide Home</a> | <a href="https://clearratepayments.com/">Main Site</a></p>
+
+    <h1>Merchant services FAQ</h1>
+    <p>This page provides short, neutral answers to common questions about pricing, statements, and operational considerations.</p>
+
+    <dl style="margin-top:18px;">
+      {faqs.map((f) => (
+        <>
+          <dt style="font-weight:700;margin-top:14px;">{f.q}</dt>
+          <dd style="margin:6px 0 0 0;">{f.a}</dd>
+        </>
+      ))}
+    </dl>
+
+    <p><strong>Related:</strong> <a href="/payment-processing-pricing-models">Pricing models</a>, <a href="/effective-rate-explained">Effective rate</a>, <a href="/surcharge-vs-dual-pricing">Surcharge vs dual pricing</a></p>
+
+    <hr />
+    <p style="font-size:14px;color:#444;">
+      <strong>Compliance note:</strong> ClearRate Payments is not a bank. Payment processing services are provided through sponsoring banks and processing partners.
+    </p>
+  </body>
+</html>

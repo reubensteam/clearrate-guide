@@ -1,0 +1,79 @@
+<!doctype html>
+---
+const title = "Payment Processing Pricing Models | Interchange-Plus vs Others";
+const description =
+  "Understand common pricing models including interchange-plus, flat-rate, and tiered pricing, and how businesses evaluate effective rate and fees.";
+const canonical = "https://guide.clearratepayments.com/payment-processing-pricing-models";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Payment Processing Pricing Models",
+  description,
+  author: { "@type": "Organization", name: "ClearRate Payments" },
+  publisher: { "@type": "Organization", name: "ClearRate Payments" },
+  mainEntityOfPage: canonical,
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="ClearRate Payments" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+  </head>
+
+  <body style="font-family:system-ui;max-width:900px;margin:0 auto;padding:24px;line-height:1.55;">
+    <p><a href="/">← Guide Home</a> | <a href="https://clearratepayments.com/">Main Site</a></p>
+
+    <h1>Payment processing pricing models</h1>
+    <p>
+      Payment processing costs are typically made up of underlying card costs (interchange and network fees) plus a processor/ISO markup.
+      Pricing models differ mainly in how transparently those costs are presented and how markups are applied.
+    </p>
+
+    <h2>Interchange-plus</h2>
+    <p>
+      Interchange-plus separates the underlying interchange costs from the processor’s markup. This structure is often used when transparency is a priority,
+      especially for merchants with moderate to higher volume.
+    </p>
+
+    <h2>Flat-rate pricing</h2>
+    <p>
+      Flat-rate pricing uses a single percentage (and sometimes a per-transaction fee) regardless of card type. It can be simple to understand,
+      but may be less cost-efficient for certain volumes or card mixes.
+    </p>
+
+    <h2>Tiered pricing</h2>
+    <p>
+      Tiered pricing groups transactions into categories (often “qualified/mid/non-qualified”) and applies different rates. It can make it harder to identify
+      what drove total costs and to compare apples-to-apples.
+    </p>
+
+    <h2>How to compare offers (practical method)</h2>
+    <ul>
+      <li>Calculate <a href="/effective-rate-explained">effective rate</a> from statements</li>
+      <li>Identify fixed monthly fees and minimums</li>
+      <li>Review per-transaction fees (auth/txn/batch) and gateway costs (if applicable)</li>
+      <li>Consider operational needs: funding timeline, support, chargeback flow, hardware</li>
+    </ul>
+
+    <p><strong>Related:</strong> <a href="/interchange-plus-pricing">Interchange-plus explained</a>, <a href="/pricing-models-compared">Comparison guide</a>, <a href="/merchant-services-faq">FAQ</a></p>
+
+    <hr />
+    <p style="font-size:14px;color:#444;">
+      <strong>Compliance note:</strong> ClearRate Payments is not a bank. Payment processing services are provided through sponsoring banks and processing partners.
+    </p>
+  </body>
+</html>

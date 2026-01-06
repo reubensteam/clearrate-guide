@@ -1,0 +1,74 @@
+<!doctype html>
+---
+const title = "Merchant Services Explained | How Card Processing Works";
+const description =
+  "A neutral explanation of merchant services, processors, acquiring banks, interchange fees, markups, and how funds move from customer to business.";
+const canonical = "https://guide.clearratepayments.com/merchant-services-explained";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Merchant Services Explained",
+  description,
+  author: { "@type": "Organization", name: "ClearRate Payments" },
+  publisher: { "@type": "Organization", name: "ClearRate Payments" },
+  mainEntityOfPage: canonical,
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="ClearRate Payments" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+  </head>
+
+  <body style="font-family:system-ui;max-width:900px;margin:0 auto;padding:24px;line-height:1.55;">
+    <p><a href="/">← Guide Home</a> | <a href="https://clearratepayments.com/">Main Site</a></p>
+
+    <h1>Merchant services explained</h1>
+    <p>
+      Merchant services is the set of tools and agreements that allow a business to accept card payments and receive funds.
+      A typical setup involves a processor, an acquiring bank, card networks, and a merchant account configuration.
+    </p>
+
+    <h2>Key parties in card processing</h2>
+    <ul>
+      <li><strong>Card networks:</strong> publish interchange tables and set network rules</li>
+      <li><strong>Issuing bank:</strong> the customer’s bank</li>
+      <li><strong>Acquiring bank:</strong> sponsors card acceptance for the merchant</li>
+      <li><strong>Processor:</strong> routes transactions and manages settlement/reporting</li>
+      <li><strong>Merchant:</strong> the business accepting the card</li>
+    </ul>
+
+    <h2>How fees are commonly structured</h2>
+    <p>
+      Most pricing structures include (1) card network and issuer costs (interchange) and (2) a processor or ISO markup.
+      The exact presentation depends on the pricing model and the merchant’s transaction profile.
+    </p>
+
+    <h2>How funds move</h2>
+    <p>
+      After authorization and capture, transactions settle through the processor and acquiring bank, and funds are deposited into the merchant’s bank account
+      according to the funding schedule.
+    </p>
+
+    <p><strong>Related:</strong> <a href="/interchange-plus-pricing">Interchange-plus</a>, <a href="/payment-processing-pricing-models">Pricing models</a>, <a href="/effective-rate-explained">Effective rate</a></p>
+
+    <hr />
+    <p style="font-size:14px;color:#444;">
+      <strong>Compliance note:</strong> ClearRate Payments is not a bank. Payment processing services are provided through sponsoring banks and processing partners.
+    </p>
+  </body>
+</html>

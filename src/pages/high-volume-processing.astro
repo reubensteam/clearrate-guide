@@ -1,0 +1,70 @@
+<!doctype html>
+---
+const title = "High-Volume Processing | What Matters for Large Monthly Volume";
+const description =
+  "Key considerations for high-volume payment processing: pricing structure, effective rate, fixed fees, funding timelines, chargebacks, and operational support.";
+const canonical = "https://guide.clearratepayments.com/high-volume-processing";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "High-Volume Processing",
+  description,
+  author: { "@type": "Organization", name: "ClearRate Payments" },
+  publisher: { "@type": "Organization", name: "ClearRate Payments" },
+  mainEntityOfPage: canonical,
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="ClearRate Payments" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+  </head>
+
+  <body style="font-family:system-ui;max-width:900px;margin:0 auto;padding:24px;line-height:1.55;">
+    <p><a href="/">← Guide Home</a> | <a href="https://clearratepayments.com/">Main Site</a></p>
+
+    <h1>High-volume processing</h1>
+    <p>
+      For high-volume merchants, small differences in pricing structure and fixed fees can materially impact total cost.
+      A good evaluation looks beyond a single advertised rate and focuses on effective rate drivers and operational needs.
+    </p>
+
+    <h2>What matters most</h2>
+    <ul>
+      <li><strong>Pricing structure:</strong> how markup is applied (basis points, per-transaction fees)</li>
+      <li><strong>Fixed fees:</strong> PCI, gateway, statement fees, minimums</li>
+      <li><strong>Card mix:</strong> rewards/corporate cards and card-present vs card-not-present</li>
+      <li><strong>Funding:</strong> funding timeline and settlement reliability</li>
+      <li><strong>Support:</strong> chargeback handling, reporting, and responsiveness</li>
+    </ul>
+
+    <h2>Practical evaluation approach</h2>
+    <ul>
+      <li>Calculate <a href="/effective-rate-explained">effective rate</a> using actual statements</li>
+      <li>List every fixed monthly fee and per-transaction fee</li>
+      <li>Confirm assumptions about card-present vs card-not-present volume</li>
+      <li>Review chargeback/dispute workflow and timelines</li>
+    </ul>
+
+    <p><strong>Related:</strong> <a href="/interchange-plus-pricing">Interchange-plus</a>, <a href="/payment-processing-pricing-models">Pricing models</a></p>
+
+    <hr />
+    <p style="font-size:14px;color:#444;">
+      <strong>Compliance note:</strong> ClearRate Payments is not a bank. Payment processing services are provided through sponsoring banks and processing partners.
+    </p>
+  </body>
+</html>
