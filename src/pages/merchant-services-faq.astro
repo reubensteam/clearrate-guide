@@ -82,7 +82,7 @@ const jsonLd = {
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
 
   <body style="font-family:system-ui;max-width:900px;margin:0 auto;padding:24px;line-height:1.55;">
